@@ -8,5 +8,4 @@
 ##### 배포 후 직접 사용하는 것이 목표 !!!
 
 ### DB 설계
-![DB설계](https://github.com/user-attachments/assets/62095319-ea2f-4d42-ac98-13294781b3ba)
-
+![DB설계](https://github.com/khr316/todolist/blob/main/DB%EC%84%A4%EA%B3%84.PNG)
