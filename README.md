@@ -1,11 +1,37 @@
 # To Do List 모바일 웹 개발
 
-### 개발 환경
-- SpringBoot JDBC Thymeleaf
-- HTML CSS JavaScript
-- MySQL
-
 ##### 배포 후 직접 사용하는 것이 목표 !!!
+
+
+## 기술 스택
+
+### 1. **Back-End**
+   - **Spring Boot**
+   - **Spring Data JPA**
+   - **Spring Web**
+   - **Spring Boot DevTools**
+   - **Spring Boot Starter Mail**
+   - **Lombok**
+
+### 2. **Database**
+   - **MySQL**
+   - **JPA (Java Persistence API)**
+
+### 3. **Frontend**
+   - **Thymeleaf**
+   - **HTML/CSS**
+   - **JavaScript**
+
+### 4. **Build**
+   - **Maven**
+
+### 5. **Version Control**
+   - **Git**
+   - **GitHub**
+
+### 6. **개발 도구**
+   - **IntelliJ IDEA**
+   - **Dbeaver**
 
 ### DB 설계
 ![엔티티](https://github.com/khr316/todolist/blob/main/DB%EC%84%A4%EA%B3%84.PNG)
@@ -32,3 +58,13 @@ CREATE TABLE todolist (
 );
 
 ```
+
+## 기능
+- 사용자 로그인/회원가입
+- 할 일 목록 CRUD 기능
+
+## 참고 자료
+- [웹사이트 스크린샷](https://khr316.tistory.com/entry/개인-ToDoList-웹-사이트-개발)
+
+
+
