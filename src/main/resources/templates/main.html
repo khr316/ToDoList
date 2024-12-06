@@ -1,0 +1,64 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>메인페이지</title>
+</head>
+<body>
+<div th:if="${userid == null}">
+    <a href="/"><img src="/img/logo_b.jpg" alt="로고이미지"></a>
+
+    <a href="/signup">회원가입</a>
+    <a href="/login">로그인</a>
+</div>
+
+<div th:if="${userid != null}">
+    <a href="/"><img src="/img/logo_b.jpg" alt="로고이미지"></a>
+    <a href="/logout">로그아웃</a>
+    <div id="calendar">
+        <h3>오늘의 할 일</h3>
+        <form action="/todolist">
+            <input type="date" name="date">
+
+            <button type="submit">의 할 일</button>
+        </form>
+    </div>
+    <div>
+        <button onclick="todoAdd()">➕</button>
+    </div>
+    <div id="todoAdd" style="display:none;">
+        <form action="/todo/add" method="post">
+            <input type="text" name="tododesc" id="tododesc" placeholder="할 일 입력">
+            <input type="datetime-local" name="deadline" id="deadline">
+            <input type="hidden" name="userid" th:value="${userid}">
+
+            <button type="submit">추가</button>
+            <button type="button" onclick="cancelTodo()">취소</button>
+        </form>
+    </div>
+</div>
+
+
+
+<script>
+    // todoAdd 함수: div를 표시하거나 숨기기
+    function todoAdd() {
+        const todoDiv = document.getElementById('todoAdd');
+        todoDiv.style.display = 'block'; // 보이기
+    }
+
+    // cancelTodo 함수: input 초기화 및 div 숨기기
+    function cancelTodo() {
+        // 입력 필드 초기화
+        document.getElementById('tododesc').value = '';
+        document.getElementById('deadline').value = '';
+
+        // div 숨기기
+        document.getElementById('todoAdd').style.display = 'none';
+    }
+</script>
+</body>
+</html>

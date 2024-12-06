@@ -1,0 +1,54 @@
+/* 전체 레이아웃 스타일 */
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f7f7f7;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+/* 로고 */
+a img {
+    width: 150px;
+    margin: 20px 0;
+}
+
+/* 투두리스트 컨테이너 */
+.todo-container {
+    width: 80%;
+    max-width: 600px;
+    background-color: #ffffff;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    border-radius: 8px;
+    padding: 20px;
+    margin-bottom: 20px;
+}
+
+/* 투두리스트 내용 */
+.todo-container p {
+    margin: 10px 0;
+    font-size: 16px;
+    color: #333;
+}
+
+/* 데드라인 날짜/시간 스타일 */
+.deadline {
+    font-size: 14px;
+    color: #666;
+}
+
+/* 완료/미완료 상태 스타일 */
+.status {
+    font-weight: bold;
+    font-size: 16px;
+}
+
+.status.incomplete {
+    color: #e74c3c; /* 미완료 빨간색 */
+}
+
+.status.complete {
+    color: #2ecc71; /* 완료 초록색 */
+}

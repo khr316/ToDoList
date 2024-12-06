@@ -1,0 +1,26 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>To Do List</title>
+    <link rel="stylesheet" href="/css/todolist.css"> <!-- 외부 CSS 파일 연결 -->
+</head>
+<body>
+<a href="/"><img src="/img/logo_b.jpg" alt="로고이미지"></a>
+
+<div th:each="todolist : ${todolist}" class="todo-container">
+    <!-- 투두리스트 설명 -->
+    <p th:text="${todolist.tododesc}"></p>
+    <!-- 데드라인 날짜 및 시간 -->
+    <p class="deadline">
+        <span th:text="${#strings.substring(todolist.deadline, 0, 10)}"></span>
+        <span th:text="${#strings.substring(todolist.deadline, 11, 16)}"></span>
+    </p>
+    <!-- 완료 상태 -->
+    <p th:if="${todolist.complete == 0}" class="status incomplete">미완료</p>
+    <p th:if="${todolist.complete == 1}" class="status complete">완료</p>
+</div>
+</body>
+</html>
