@@ -1,6 +1,7 @@
 # To Do List 모바일 웹 개발
 
 ##### 배포 후 직접 사용하는 것이 목표 !!!
+- AWS
 
 
 ## 기술 스택
@@ -15,7 +16,7 @@
 
 ### 2. **Database**
    - **MySQL**
-   - **JPA (Java Persistence API)**
+   - **JDBC**
 
 ### 3. **Frontend**
    - **Thymeleaf**
@@ -32,8 +33,9 @@
 ### 6. **개발 도구**
    - **IntelliJ IDEA**
    - **Dbeaver**
+<hr>
 
-### DB 설계
+## DB 설계
 ![엔티티](https://github.com/khr316/todolist/blob/main/DB%EC%84%A4%EA%B3%84.PNG)
 ```
 -- 회원(users) 테이블 생성
@@ -62,6 +64,11 @@ CREATE TABLE todolist (
 ## 기능
 - 사용자 로그인/회원가입
 - 할 일 목록 CRUD 기능
+- 임시 비밀번호 발급 (이메일)
+- 마감기한 하루 전 안내 메일 발송
+
+
+
 
 ## 참고 자료
 - [웹사이트 스크린샷](https://khr316.tistory.com/entry/개인-ToDoList-웹-사이트-개발)
