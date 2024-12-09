@@ -1,27 +1,29 @@
-# To Do List 모바일 웹 개발
+# To Do List 웹 어플리케이션
+## 스프링부트 웹 개발 프로젝트
 
-##### 배포 후 직접 사용하는 것이 목표 !!!
-- AWS
+**목표:**
+- AWS 배포 후 실제 서비스로 활용
+- 효율적인 할 일 관리 시스템 제공
 
+---
 
 ## 기술 스택
 
 ### 1. **Back-End**
-   - **Spring Boot**
-   - **Spring Data JPA**
-   - **Spring Web**
-   - **Spring Boot DevTools**
-   - **Spring Boot Starter Mail**
-   - **Lombok**
+   - **Spring Boot**: 어플리케이션 개발
+   - **Spring Data JDBC**: 데이터베이스 연동 및 ORM
+   - **Spring Web**: RESTful API 및 웹 어플리케이션
+   - **Spring Boot DevTools**: 개발 환경 개성
+   - **Spring Boot Starter Mail**: 이메일 기능
+   - **Lombok**: 코드 간결화
 
 ### 2. **Database**
-   - **MySQL**
-   - **JDBC**
+   - **MySQL**: 관계형 데이터베이스
 
 ### 3. **Frontend**
-   - **Thymeleaf**
-   - **HTML/CSS**
-   - **JavaScript**
+   - **Thymeleaf**: 템플릿 엔진
+   - **HTML/CSS**: 프론트엔드 구조 및 디자인
+   - **JavaScript**: 동적 기능
 
 ### 4. **Build**
    - **Maven**
@@ -40,8 +42,8 @@
 ```
 -- 이메일 찾기 질의응답
 create table qna (
-	id int auto_increment primary key,                -- QnA 번호 (Primary Key)
-	question text                                     -- 질문
+	id int auto_increment primary key,            -- QnA 번호 (Primary Key)
+	question text                                 -- 질문
 );
 
 -- 회원(users) 테이블 생성
@@ -52,7 +54,8 @@ CREATE TABLE users (
     email VARCHAR(30) NOT NULL UNIQUE,                -- 회원 이메일 (중복 불가)
     password VARCHAR(30) NOT null,                    -- 회원 비밀번호
     question_id text not null,                        -- 이메일 찾기 질문 번호
-    answer text not null                              -- 이메일 찾기 답변
+    answer text not null,                             -- 이메일 찾기 답변
+    mail int default 0                                -- 마감기한 안내로 메일 받은 개수 
 );
 
 -- 투두리스트(todolist) 테이블 생성
@@ -102,7 +105,7 @@ CREATE TABLE todolist (
 
 
 
-## 참고 자료
+## 웹사이트 스크린샷
 - [웹사이트 스크린샷](https://khr316.tistory.com/entry/개인-ToDoList-웹-사이트-개발)
 
 
